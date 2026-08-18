@@ -1,0 +1,451 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #222;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    height: 70px;
+
+    background: #1e3a8a;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+
+.logo {
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+
+/* ========================================
+   ACCUEIL
+======================================== */
+
+.hero {
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #2563eb,
+            #38bdf8
+        );
+}
+
+
+.hero-content {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+.hero h1 {
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   BARRE DE RECHERCHE
+======================================== */
+
+.search-box {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.search-box input {
+    width: 500px;
+
+    padding: 17px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+
+.search-box input:focus {
+    box-shadow:
+        0 0 0 4px
+        rgba(255, 255, 255, 0.3);
+}
+
+
+.search-box button {
+    padding: 17px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.search-box button:hover {
+    background: #000;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   BOUTON ACTUALISER
+======================================== */
+
+.refresh-btn {
+    padding: 13px 25px;
+
+    border: 2px solid white;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.refresh-btn:hover {
+    background: white;
+
+    color: #1e3a8a;
+}
+
+
+/* ========================================
+   SECTION PAYS
+======================================== */
+
+.countries-section {
+    padding: 60px 8%;
+
+    min-height: 500px;
+}
+
+
+.countries-section h2 {
+    text-align: center;
+
+    color: #1e3a8a;
+
+    font-size: 36px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   NOMBRE DE RÉSULTATS
+======================================== */
+
+.result-count {
+    text-align: center;
+
+    color: #555;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   CHARGEMENT
+======================================== */
+
+.loading {
+    text-align: center;
+
+    font-size: 22px;
+
+    color: #2563eb;
+
+    margin: 30px 0;
+}
+
+
+/* ========================================
+   ERREUR
+======================================== */
+
+.error {
+    text-align: center;
+
+    color: #dc2626;
+
+    font-size: 18px;
+
+    margin: 20px;
+}
+
+
+/* ========================================
+   CONTAINER DES CARTES
+======================================== */
+
+.countries-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(270px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   CARTE PAYS
+======================================== */
+
+.country-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.country-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   DRAPEAU
+======================================== */
+
+.country-flag {
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef4ff;
+
+    font-size: 100px;
+}
+
+
+/* ========================================
+   INFORMATIONS
+======================================== */
+
+.country-info {
+    padding: 22px;
+}
+
+
+.country-info h3 {
+    font-size: 23px;
+
+    color: #1e3a8a;
+
+    margin-bottom: 15px;
+}
+
+
+.country-info p {
+    color: #555;
+
+    line-height: 1.5;
+
+    margin: 10px 0;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+
+    .logo {
+        font-size: 18px;
+    }
+
+
+    nav {
+        gap: 12px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .hero p {
+        font-size: 17px;
+    }
+
+
+    .search-box {
+        flex-direction: column;
+    }
+
+
+    .search-box input {
+        width: 100%;
+    }
+
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    .countries-section {
+        padding: 40px 20px;
+    }
+
+}

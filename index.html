@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recherche de pays</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            🌍 Country Explorer
+        </div>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#pays">Pays</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE D'ACCUEIL ================= -->
+
+    <section id="accueil" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Explorez le monde 🌎
+            </h1>
+
+            <p>
+                Recherchez un pays et découvrez
+                ses principales informations.
+            </p>
+
+
+            <!-- BARRE DE RECHERCHE -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Exemple : France, Senegal, Japon..."
+                >
+
+                <button id="searchBtn">
+                    🔎 Rechercher
+                </button>
+
+            </div>
+
+
+            <!-- BOUTON ACTUALISER -->
+
+            <button id="refreshBtn" class="refresh-btn">
+                🔄 Actualiser les données
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LISTE DES PAYS ================= -->
+
+    <section id="pays" class="countries-section">
+
+        <h2>
+            Liste des pays
+        </h2>
+
+
+        <!-- INDICATEUR DE CHARGEMENT -->
+
+        <div id="loading" class="loading">
+            ⏳ Chargement...
+        </div>
+
+
+        <!-- MESSAGE D'ERREUR -->
+
+        <div id="error" class="error">
+        </div>
+
+
+        <!-- NOMBRE DE RÉSULTATS -->
+
+        <div id="resultCount" class="result-count">
+        </div>
+
+
+        <!-- CARTES -->
+
+        <div
+            id="countriesContainer"
+            class="countries-container">
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Country Explorer
+        </p>
+
+        <p>
+            Application réalisée avec HTML, CSS et JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
